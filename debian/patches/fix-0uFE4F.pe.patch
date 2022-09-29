@@ -1,0 +1,27 @@
+From: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
+Date: Mon, 27 Jul 2015 05:39:47 +0900
+Subject: fix-0uFE4F.pe
+
+Origin: vendor, http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/media-fonts/arphicfonts/files/arphicfonts-0.2.20080216.1.pe?revision=1.1&view=markup
+Bug-Debian: http://bugs.debian.org/
+Forwarded: no
+Last-Update: 2014-06-05
+---
+ fix-0uFE4F.pe | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 fix-0uFE4F.pe
+
+diff --git a/fix-0uFE4F.pe b/fix-0uFE4F.pe
+new file mode 100644
+index 0000000..49265a7
+--- /dev/null
++++ b/fix-0uFE4F.pe
+@@ -0,0 +1,8 @@
++i=1
++while (i < $argc)
++  Open($argv[i])
++  Select(0ufe4f); Move(0, -760)
++  Generate($argv[i])
++  Close()
++  i += 1
++endloop

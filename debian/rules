@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	fontforge -script $(CURDIR)/fix-0uFE4F.pe $(CURDIR)/*.ttf
+	fontforge -script $(CURDIR)/fix-stylename.pe $(CURDIR)/*.ttf

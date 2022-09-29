@@ -1,0 +1,23 @@
+From: Hideki Yamane <henrich@debian.org>
+Date: Mon, 27 Jul 2015 05:41:24 +0900
+Subject: fix Bug#207951 style should be "Regular", not "Reguler"
+
+---
+ fix-stylename.pe | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 fix-stylename.pe
+
+diff --git a/fix-stylename.pe b/fix-stylename.pe
+new file mode 100644
+index 0000000..d4a5419
+--- /dev/null
++++ b/fix-stylename.pe
+@@ -0,0 +1,8 @@
++i=1
++while (i < $argc)
++  Open($argv[i])
++  SetTTFName(0x409,2,"Regular")
++  Generate($argv[i])
++  Close()
++  i += 1
++endloop
